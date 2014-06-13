@@ -1,9 +1,5 @@
 require "aws/cfn/yats/version"
-
-module Aws
-  module Cfn
-    module Yats
-      # Your code goes here...
-    end
-  end
-end
+require "aws/cfn/yats/base"
+require "aws/cfn/yats/fncall"
+require "aws/cfn/yats/json2rb"
+require "aws/cfn/yats/json2yaml"
