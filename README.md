@@ -6,7 +6,7 @@ AWS Cloudformation templates expressed with a Ruby DSL, YAML or JSON in a modula
 
 Add this line to your application's Gemfile:
 
-    gem 'cfn-yats'
+    gem 'aws-cfn-yats'
 
 And then execute:
 
@@ -14,7 +14,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install cfn-yats
+    $ gem install aws-cfn-yats
 
 ## Usage
 
@@ -30,7 +30,7 @@ https://github.com/Optaros/cloud_builder
 
 ## Contributing
 
-1. Fork it ( http://github.com/<my-github-username>/cfn-yats/fork )
+1. Fork it ( http://github.com/<my-github-username>/aws-cfn-yats/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
