@@ -1,5 +1,0 @@
-column0     column1     column2     column3     column4
-foo         baz         qux                     quux
-foo         corge       grault      garply
-bar         waldo       fred
-bar         plugh       xyzzy       thud
