@@ -12,6 +12,23 @@ module Aws
 
         protected
 
+        def pprint(val)
+          case detect_type(val)
+            when :template
+              pprint_cfn_template(val)
+            when :parameter
+              pprint_cfn_section 'parameter', 'TODO', val
+            when :resource
+              pprint_cfn_resource 'TODO', val
+            when :parameters
+              val.each { |k, v| pprint_cfn_section 'parameter', k, v }
+            when :resources
+              val.each { |k, v| pprint_cfn_resource k, v }
+            else
+              pprint_value(val, '')
+          end
+        end
+
         def pprint_cfn_template(tpl)
            puts "#!/usr/bin/env ruby"
            puts

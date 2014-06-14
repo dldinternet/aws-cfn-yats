@@ -1,5 +1,6 @@
 require "aws/cfn/yats/base"
 require 'yaml'
+require 'json/pure'
 
 module Aws
   module Cfn
@@ -16,8 +17,24 @@ module Aws
         end
 
         def pprint_cfn_template(tpl)
+          pprint_value(tpl)
+        end
 
-          @json = JSON.pretty_generate(tpl)
+        def pprint_cfn_section(section, name, options)
+          pprint_value(section)
+        end
+
+        def pprint_cfn_resource(name, options)
+          pprint_value({ name => options })
+        end
+
+        def pprint_value(val, indent="\t")
+          @json = JSON.pretty_generate(val, {
+              :indent         => indent,
+              :space          => ' ',
+              :object_nl      => "\n",
+              :array_nl       => "\n"
+          } )
 
           puts @json
         end
