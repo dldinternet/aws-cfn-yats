@@ -9,7 +9,7 @@ module Aws
 
         def pprint_cfn_template(tpl)
 
-          yml = YAML::dump(@json)
+          yml = YAML::dump(tpl)
 
           puts yml
         end

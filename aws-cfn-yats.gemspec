@@ -18,7 +18,7 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ['lib']
 
-  spec.add_dependency 'aws-cfn-dsl', '>=0.0.2'
+  # spec.add_dependency 'aws-cfn-dsl', '>=0.0.2'
   spec.add_dependency 'aws-cfn-decompiler', '>= 0.0.3', '~> 0.0'
   spec.add_dependency 'aws-cfn-compiler', '>= 0.2.1', '~> 0.2'
   spec.add_dependency 'cloud_builder', '> 0'
