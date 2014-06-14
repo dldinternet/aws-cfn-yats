@@ -22,7 +22,6 @@ add_path = File.expand_path(File.join(path, "..", "lib"))
 $:.unshift(add_path)
 
 require 'aws/cfn/yats'
-require 'json'
 
 unless (ARGV & %w(-h --help -?)).empty?
   $stderr.puts <<"EOF"

@@ -5,6 +5,7 @@ unless RUBY_VERSION >= '1.9'
   exit(2)
 end
 
+require 'json/pure'
 require "aws/cfn/yats/version"
 
 module Aws
@@ -88,7 +89,7 @@ module Aws
             when :resources
               val.each { |k, v| pprint_cfn_resource k, v }
             else
-              pprint_value(val, '')
+              pprint_value(val)
           end
         end
 
