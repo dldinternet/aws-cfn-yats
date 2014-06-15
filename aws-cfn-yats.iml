@@ -19,23 +19,13 @@
     </content>
     <orderEntry type="jdk" jdkName="RVM: ruby-2.1.2 [aws-cfn-yats]" jdkType="RUBY_SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" scope="PROVIDED" name="activesupport (v4.1.1, RVM: ruby-2.1.2 [aws-cfn-yats]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="awesome_print (v1.2.0, RVM: ruby-2.1.2 [aws-cfn-yats]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="aws-cfn-compiler (v0.2.3, RVM: ruby-2.1.2 [aws-cfn-yats]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="aws-cfn-decompiler (v0.2.1, RVM: ruby-2.1.2 [aws-cfn-yats]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="aws-sdk (v1.43.2, RVM: ruby-2.1.2 [aws-cfn-yats]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bundler (v1.6.2, RVM: ruby-2.1.2 [aws-cfn-yats]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="clamp (v0.6.3, RVM: ruby-2.1.2 [aws-cfn-yats]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="cloud_builder (v0.0.11, RVM: ruby-2.1.2 [aws-cfn-yats]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="i18n (v0.6.9, RVM: ruby-2.1.2 [aws-cfn-yats]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="json_pure (v1.8.1, RVM: ruby-2.1.2 [aws-cfn-yats]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="mini_portile (v0.6.0, RVM: ruby-2.1.2 [aws-cfn-yats]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="minitest (v5.3.4, RVM: ruby-2.1.2 [aws-cfn-yats]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="nokogiri (v1.6.2.1, RVM: ruby-2.1.2 [aws-cfn-yats]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rake (v10.3.2, RVM: ruby-2.1.2 [aws-cfn-yats]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="slop (v3.5.0, RVM: ruby-2.1.2 [aws-cfn-yats]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="thread_safe (v0.3.4, RVM: ruby-2.1.2 [aws-cfn-yats]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="tzinfo (v1.2.1, RVM: ruby-2.1.2 [aws-cfn-yats]) [gem]" level="application" />
   </component>
 </module>
 
