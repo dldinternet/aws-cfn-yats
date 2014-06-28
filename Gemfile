@@ -9,5 +9,4 @@ gem 'dldinternet-mixlib-cli', :path => '../dldinternet-mixlib-cli', :group => :d
 gem 'aws-cfn-dsl', :path => '../aws-cfn-dsl', :group => :development
 gem 'aws-cfn-decompiler', :path => '../aws-cfn-decompiler', :group => :development
 gem 'aws-cfn-compiler', :path => '../aws-cfn-compiler', :group => :development
-gem 'aws-cfn-yats', :path => '../aws-cfn-yats', :group => :development
 gem 'aws-cfn-stacker', :path => '../aws-cfn-stacker', :group => :development
