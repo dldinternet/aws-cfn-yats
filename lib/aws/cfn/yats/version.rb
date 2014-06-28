@@ -1,7 +1,7 @@
 module Aws
   module Cfn
     module Yats
-      VERSION = "0.1.7"
+      VERSION = "0.1.8"
     end
   end
 end
