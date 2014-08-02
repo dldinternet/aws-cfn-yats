@@ -2,6 +2,10 @@
 
 require 'rubygems'
 
+#!/usr/bin/env ruby
+
+require 'rubygems'
+
 path = File.dirname(__FILE__)
 unless File.exists?("#{path}/../.gitignore")
 
@@ -23,38 +27,30 @@ end
 add_path = File.expand_path(File.join(path, "..", "lib"))
 $:.unshift(add_path)
 
-require 'aws/cfn/yats'
-
-unless (ARGV & %w(-h --help -?)).empty?
-  $stderr.puts <<"EOF"
-usage: #{$PROGRAM_NAME} [cloudformation-template.json] ...
-
-Converts the specified CloudFormation JSON template or template fragment to
-Ruby DSL syntax.  Reads from stdin or from the specified json files.  Note
-that the input must be valid JSON.
-
-Examples:
-
-  # Convert a JSON CloudFormation template to Ruby DSL syntax
-  #{$PROGRAM_NAME} my-template.json > my-template.rb
-  chmod +x my-template.rb
-
-  # Convert the JSON fragment in the clipboard to Ruby DSL syntax
-  pbpaste | #{$PROGRAM_NAME} | less
-
-EOF
-  exit(2)
-end
-
-y2j = Aws::Cfn::Yats::Yaml2Json.new
-
-if ARGV.empty?
-  template = $stdin.read
-  y2j.transform(template)
-else
-  ARGV.each do |filename|
-    template = File.read(filename)
-    y2j.transform(template)
+path = File.dirname(__FILE__)
+if File.exists?("#{path}/../.gitignore")
+  %w(aws-cfn-decompiler aws-cfn-compiler aws-cfn-dsl cloudformation-ruby-dsl dldinternet-mixlib-logging dldinternet-mixlib-cli).each do |mod|
+    add_path = File.expand_path(File.join(path, "../../#{mod}", "lib"))
+    $:.unshift(add_path)
   end
+else
+  # Borrowing from "whiches" gem ...
+  cmd  = File.basename(__FILE__, '.rb')
+  exes = []
+  exts = ENV['PATHEXT'] ? ENV['PATHEXT'].split(';') : ['']
+  ENV['PATH'].split(File::PATH_SEPARATOR).each do |path|
+    exts.each { |ext|
+      exe = File.join(path, "#{cmd}#{ext}")
+      exes << exe if File.executable? exe
+    }
+  end
+  if exes.size > 0
+    path = File.dirname(exes[0])
+  end
+
 end
-# The user should make the resulting template executable w/chmod +x
+add_path = File.expand_path(File.join(path, "..", "lib"))
+$:.unshift(add_path)
+
+require 'aws/cfn/yats/yaml2json'
+Aws::Cfn::Yats::Yaml2Json.new.run

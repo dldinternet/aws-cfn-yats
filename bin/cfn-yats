@@ -3,9 +3,13 @@
 require 'rubygems'
 
 path = File.dirname(__FILE__)
-unless File.exists?("#{path}/../.gitignore")
-
-# Borrowing from "whiches" gem ...
+if File.exists?("#{path}/../.gitignore")
+  %w(aws-cfn-decompiler aws-cfn-compiler aws-cfn-dsl cloudformation-ruby-dsl dldinternet-mixlib-logging dldinternet-mixlib-cli).each do |mod|
+    add_path = File.expand_path(File.join(path, "../../#{mod}", "lib"))
+    $:.unshift(add_path)
+  end
+else
+  # Borrowing from "whiches" gem ...
   cmd  = File.basename(__FILE__, '.rb')
   exes = []
   exts = ENV['PATHEXT'] ? ENV['PATHEXT'].split(';') : ['']
@@ -23,4 +27,6 @@ end
 add_path = File.expand_path(File.join(path, "..", "lib"))
 $:.unshift(add_path)
 
+
 require 'aws/cfn/yats'
+Aws::Cfn::Yats::Main.new.run
