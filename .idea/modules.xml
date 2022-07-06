@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../aws-cfn-compiler/aws-cfn-compiler.iml" filepath="$PROJECT_DIR$/../aws-cfn-compiler/aws-cfn-compiler.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../aws-cfn-decompiler/aws-cfn-decompiler.iml" filepath="$PROJECT_DIR$/../aws-cfn-decompiler/aws-cfn-decompiler.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../aws-cfn-dsl/aws-cfn-dsl.iml" filepath="$PROJECT_DIR$/../aws-cfn-dsl/aws-cfn-dsl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../aws-cfn-stacker/aws-cfn-stacker.iml" filepath="$PROJECT_DIR$/../aws-cfn-stacker/aws-cfn-stacker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aws-cfn-yats.iml" filepath="$PROJECT_DIR$/aws-cfn-yats.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dldinternet-mixlib-cli/dldinternet-mixlib-cli.iml" filepath="$PROJECT_DIR$/../dldinternet-mixlib-cli/dldinternet-mixlib-cli.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dldinternet-mixlib-logging/dldinternet-mixlib-logging.iml" filepath="$PROJECT_DIR$/../dldinternet-mixlib-logging/dldinternet-mixlib-logging.iml" />
+    </modules>
+  </component>
+</project>
+
